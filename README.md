@@ -6,7 +6,7 @@ Create a small API yourself, strengthen its input contract, and make failures pr
 
 You need Python 3.12, a terminal, an editor and a browser. These exercises use Pydantic v2. You should recognise Python classes/type hints, dictionaries, function decorators, JSON and HTTP requests. A type hint describes an expected type; Pydantic uses it at runtime to parse and validate data. A FastAPI route decorator connects an HTTP method/path to a function.
 
-Create your own empty working directory outside this resource folder. No starter application is provided for exercises 1 or 2. Keep the `solutions/` directories closed until you have attempted the corresponding task. Each is a possible solution with runnable verification tests, not a required implementation.
+For local setup, create your own empty working directory outside this resource folder. No starter application is provided for exercises 1 or 2. Keep the `solutions/` directories closed until you have attempted the corresponding task. Each is a possible solution with runnable verification tests, not a required implementation.
 
 ### Environment
 
@@ -29,17 +29,14 @@ Expected versions: FastAPI 0.162.0 and Pydantic 2.14.2. The tested environment i
 
 ### GitHub Codespaces (alternative)
 
-You can use a Codespace instead of setting up Python on your computer. From this repository's GitHub page, choose **Code** → **Codespaces** → **Create codespace on ...** and wait for the environment to finish setting up. Open a terminal at the repository root, then create a separate working directory and install the pack's dependencies into the Codespace's Python:
+You can use a Codespace instead of setting up Python on your computer. From this repository's GitHub page, choose **Code** → **Codespaces** → **Create codespace on ...** and wait for the environment to finish setting up. Open a terminal at the repository root and install the pack's dependencies into the Codespace's Python:
 
 ```bash
-mkdir -p ~/api-validation-practice
-cp requirements.txt ~/api-validation-practice/
-cd ~/api-validation-practice
 python -m pip install -r requirements.txt
 python -c "import fastapi, pydantic; print(fastapi.__version__, pydantic.__version__)"
 ```
 
-No virtual environment or activation is needed in this Codespace. The packages are installed in its shared Python environment; this does not change your computer's Python installation. Keep your exercise files in `~/api-validation-practice`, outside the resource folder.
+No virtual environment, activation or extra working directory is needed in this Codespace. The packages are installed in its shared Python environment; this does not change your computer's Python installation. Use the repository root as your working directory for the exercises.
 
 ## The request boundary
 
