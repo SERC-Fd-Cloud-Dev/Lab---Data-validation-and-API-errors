@@ -4,7 +4,7 @@ Create a small API yourself, strengthen its input contract, and make failures pr
 
 ## Start here
 
-You need Python 3.12, a terminal, an editor and a browser. These exercises use Pydantic v2. You should recognise Python classes/type hints, dictionaries, function decorators, JSON and HTTP requests. A type hint describes an expected type; Pydantic uses it at runtime to parse and validate data. A FastAPI route decorator connects an HTTP method/path to a function.
+You need Python 3.12 or higher, a terminal, an editor and a browser. These exercises use Pydantic v2. You should recognise Python classes/type hints, dictionaries, function decorators, JSON and HTTP requests. A type hint describes an expected type; Pydantic uses it at runtime to parse and validate data. A FastAPI route decorator connects an HTTP method/path to a function.
 
 Create your own empty working directory outside this resource folder. No starter application is provided for exercises 1 or 2. Keep the `solutions/` directories closed until you have attempted the corresponding task. Each is a possible solution with runnable verification tests, not a required implementation.
 
