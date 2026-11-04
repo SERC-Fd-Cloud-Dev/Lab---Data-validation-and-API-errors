@@ -27,6 +27,20 @@ python -c "import fastapi, pydantic; print(fastapi.__version__, pydantic.__versi
 
 Expected versions: FastAPI 0.162.0 and Pydantic 2.14.2. The tested environment is Python 3.12. These are the pack's tested pins, not a promise about the versions installed in college labs.
 
+### GitHub Codespaces (alternative)
+
+You can use a Codespace instead of setting up Python on your computer. From this repository's GitHub page, choose **Code** → **Codespaces** → **Create codespace on ...** and wait for the environment to finish setting up. Open a terminal at the repository root, then create a separate working directory and install the pack's dependencies into the Codespace's Python:
+
+```bash
+mkdir -p ~/api-validation-practice
+cp requirements.txt ~/api-validation-practice/
+cd ~/api-validation-practice
+python -m pip install -r requirements.txt
+python -c "import fastapi, pydantic; print(fastapi.__version__, pydantic.__version__)"
+```
+
+No virtual environment or activation is needed in this Codespace. The packages are installed in its shared Python environment; this does not change your computer's Python installation. Keep your exercise files in `~/api-validation-practice`, outside the resource folder.
+
 ## The request boundary
 
 ![Input validation can reject a request before route logic](assets/validation.svg)
@@ -46,6 +60,8 @@ Continue using your own `main.py` for exercises 1–4. The endpoint checks reque
 ## Running and recovery
 
 Run `python -m uvicorn main:app --reload` from the directory containing your `main.py`. Open http://127.0.0.1:8000/docs. Stop with Ctrl+C. After changing code, check the terminal for reload errors before retrying. If port 8000 is occupied, stop your earlier server or use `--port 8001` and the matching browser address.
+
+In Codespaces, run the server from your working directory and open port 8000 from the **Ports** tab; use its forwarded address followed by `/docs`.
 
 Run tests in a second terminal using the same environment: `python -m pytest -q`. A running Uvicorn server is not required for TestClient tests. Keep a saved copy or Git commit after each exercise. To recover, return to your previous working copy and reapply one change at a time.
 
