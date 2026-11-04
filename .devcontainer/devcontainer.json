@@ -1,9 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
-    "name": "Default Linux Universal",
+    "name": "Python API",
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    "image": "ghcr.io/serc-computing/devcontainers/python-api:1",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
@@ -12,7 +12,7 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": ".devcontainer/scripts/check-features.sh && code --install-extension https://github.com/SERC-Cloud-Dev-DF2A-2526/VS-Code-Extensions/releases/download/v0.0.2/services-manager-0.0.2.vsix",
+    "postCreateCommand": ".devcontainer/scripts/check-features.sh",
 
     // Configure tool-specific properties.
     "customizations": {
@@ -68,11 +68,11 @@
 
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
-                "ms-python.python",
-                "ms-dotnettools.csdevkit",
-                "redhat.vscode-yaml",
-                "github.vscode-github-actions",
-                "ms-azuretools.vscode-containers",
+                // "ms-python.python",
+                // "ms-dotnettools.csdevkit",
+                // "redhat.vscode-yaml",
+                // "github.vscode-github-actions",
+                // "ms-azuretools.vscode-containers",
                 "mtxr.sqltools",
                 "mtxr.sqltools-driver-mysql",
                 "mtxr.sqltools-driver-pg",
